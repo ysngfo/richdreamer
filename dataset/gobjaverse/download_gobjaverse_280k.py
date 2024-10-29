@@ -6,7 +6,7 @@ from multiprocessing import Pool
 
 def download_url(item):
     end = 4 # hard-coded
-    copy_items = ['.json','.png'] # hard-coded
+    copy_items = ['.png'] # hard-coded
     global save_dir
     oss_base_dir = os.path.join("https://virutalbuy-public.oss-cn-hangzhou.aliyuncs.com/share/aigc3d/objaverse", item, "campos_512_v4")
     for nums in range(end):
