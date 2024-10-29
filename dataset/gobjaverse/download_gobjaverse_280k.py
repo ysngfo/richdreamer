@@ -5,11 +5,12 @@ import os, sys, json
 from multiprocessing import Pool
 
 def download_url(item):
-    end = 40 # hard-coded
+    end = 4 # hard-coded
     copy_items = ['.json','.png'] # hard-coded
     global save_dir
     oss_base_dir = os.path.join("https://virutalbuy-public.oss-cn-hangzhou.aliyuncs.com/share/aigc3d/objaverse", item, "campos_512_v4")
-    for index in range(end):
+    for nums in range(end):
+        index=6*nums
         index = "{:05d}".format(index)
         for copy_item in copy_items:
             postfix = index + "/" + index + copy_item
